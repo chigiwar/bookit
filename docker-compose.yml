@@ -1,0 +1,30 @@
+version: "3.1"
+networks:
+  net1:
+
+services:
+  db:
+    build: test_env/db
+    container_name: db
+    networks:
+      net1:
+        aliases:
+          - db-main
+
+  app:
+    build:
+      context: .
+      args:
+        HOST: 0.0.0.0
+        PORT: 8081
+      dockerfile: Dockerfile
+    container_name: /app
+
+    depends_on:
+      - db
+    networks:
+      net1:
+        aliases:
+          - app
+    volumes:
+    - ./:/app

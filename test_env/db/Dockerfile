@@ -1,0 +1,4 @@
+FROM postgres:12.1
+ENV POSTGRES_USER bookit
+ENV POSTGRES_PASSWORD secret
+ENV POSTGRES_DB bookit
