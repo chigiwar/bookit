@@ -5,7 +5,7 @@ networks:
 services:
   db:
     build: test_env/db
-    container_name: db
+    container_name: bookit-db-main
     networks:
       net1:
         aliases:
@@ -18,7 +18,7 @@ services:
         HOST: 0.0.0.0
         PORT: 8081
       dockerfile: Dockerfile
-    container_name: /app
+    container_name: bookit_app
 
     depends_on:
       - db

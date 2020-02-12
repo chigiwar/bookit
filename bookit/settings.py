@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'bookit',
         'USER': 'bookit',
         'PASSWORD': 'secret',
-        'HOST': '172.17.0.2',
+        'HOST': '172.21.0.2',
         'PORT': '5432'
     }
 }

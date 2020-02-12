@@ -18,3 +18,12 @@ check-code:
 check-deploy:
 	@ $(PYTHON) manage.py check --deploy
 
+mm:
+	@ $(PYTHON) manage.py makemigrations
+	@ $(PYTHON) manage.py migrate
+
+build_env:
+	@ docker-compose build
+
+run_env:
+	@ docker-compose up

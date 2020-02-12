@@ -15,4 +15,4 @@ ADD . /app
 RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev && \
      pip install -r requirements.txt --no-cache-dir --upgrade pip
 
-ENTRYPOINT ["make", "run"]
+ENTRYPOINT sh ./entrypoint.sh
